@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다양한 태그 예시들</title>
+</head>
+<body>
+    <div>
+        <h3>select 태그</h3>
+        <p>
+            사용자가 직접 값을 입력하는 것이 아니라 <br>
+            제시한 여러 개의 값들 중에서 선택하도록 하고자 할 때 사용
+        </p>
+        <p>
+            폼 제출(서버로 전송) 시 option 태그의 값이 전달됨
+            <ul>
+                <li>value 속성 값이 없을 경우: option 태그의 <b>콘텐츠(내용)</b> 전송</li>
+                <li>value 속성 값이 있는 경우: <b>value 속성 값</b> 전송</li>
+            </ul>
+        </p>
+
+        <form action="test" method="get">
+            <label>
+                언어 선택:
+                <select name="lang">
+                    <option value="ko">한국어</option>
+                    <option value="jp">일본어</option>
+                    <option value="en">영어</option>
+                </select>
+
+                <input type="submit" value="선택">
+            </label>
+        </form>
+    </div>
+
+    <br><br>
+
+    <div>
+        <h3>그 외 input 태그의 타입</h3>
+
+        <form action="test2" method="get">
+            <h4>color</h4>
+            <p>색상을 선택할 수 있는 타입</p>
+            <input type="color" name="color">
+
+            <h4>file</h4>
+            <p>파일을 첨부할 수 있는 타입</p>
+            <input type="file" name="file">
+
+            <h4>hidden</h4>
+            <p>사용자에게(화면) 표시하지 않으면서 
+                데이터를 전달할 수 있는 타입
+            </p>
+            <input type="hidden" name="secret" value="guest user">
+
+            <button type="submit">테스트</button>
+        </form>
+    </div>
+</body>
+</html>
