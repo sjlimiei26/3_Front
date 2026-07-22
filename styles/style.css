@@ -1,0 +1,91 @@
+/* ---------- 공통 css -------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #312727;
+    line-height: 1.6;
+}
+
+ul, ol, li { list-style: none; }
+
+a { 
+    text-decoration: none; 
+    color: inherit;     /* 부모의 설정된 값을 따라가도록 지정 */
+}
+
+input {
+    outline: none;
+}
+
+.btn {
+    border: none;
+    background-color: #6262fd;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+/* --------------------------------------------- */
+/*
+    헤더 영역 : 로고, 검색창, 로그인/회원가입 버튼
+*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 24px;
+    border-bottom: 1px solid #dadada;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    color: #6262fd;
+}
+.logo span {
+    color: black;
+}
+
+.search {
+    flex: 1;
+    max-width: 450px;
+
+    height: 30px;
+
+    display: flex;
+}
+.search input {
+    flex: 1;
+
+    border: 1px solid #c7c7c7;
+    border-right: none;
+    border-radius: 20px 0 0 20px; /* 좌측상단 우측 상단 우측 하단 좌측하단 */
+    padding: 0 12px;
+    font-size: 14px;
+}
+.search input:focus {
+    border-color: #6262fd;
+}
+
+.search button {
+    width: 40px;
+    border-radius: 0 20px 20px 0;
+}
+.search button:hover {
+    background-color:#8686ff;
+}
+
+.header-util {
+    display: flex;
+    gap: 12px;
+}
+
+.header-util a:hover {
+    color: #6262fd;
+}
+/* -------------------------------------------------- */
