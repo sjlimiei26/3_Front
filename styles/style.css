@@ -89,3 +89,143 @@ header {
     color: #6262fd;
 }
 /* -------------------------------------------------- */
+/* 메뉴 영역 */
+.menu {
+    background-color: #3c0163;
+    color: #f6f7ff;
+}
+.menu > ul {
+    display: flex;
+
+    max-width: 920px;
+    margin: 0 auto;
+}
+.menu > ul > li {
+    flex: 1;
+
+    text-align: center;
+
+    position: relative;
+}
+.menu > ul > li > a {
+    font-size: 15px;
+    font-weight: 700;
+
+    display: inline-block;
+    padding: 16px 8px;
+}
+.menu > ul > li > a:hover {
+    color: white;
+}
+
+
+.menu .submenu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    background-color: white;
+    color: #6262fd;
+    border: 1px solid #cacaca;
+    border-top: none;
+}
+.menu .submenu a {
+    font-size: 15px;
+    padding: 12px;
+    font-weight: 500;
+}
+.menu .submenu a:hover {
+    font-weight: 800;
+}
+.menu > ul > li:hover .submenu {
+    display: inline-block;
+}
+/* -------------------------------------------- */
+/*
+    * 메인 영역 : 배너, 공지, 과정 정보 / 로그인폼, 바로가기 링크
+*/
+main {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+}
+
+main section {
+    flex: 7;
+}
+main aside {
+    flex: 3;
+}
+
+main section > * {      /* .banner,.notice,.cards */
+    margin-top: 20px;
+}
+
+.banner {
+    background: linear-gradient(120deg, #000, #5c5cff, #a3a1ff);
+    padding: 40px 36px;
+    color: white;
+    border-radius: 14px;
+}
+.banner small {
+    font-weight: 700;
+    opacity: 0.8;
+}
+.banner h2 {
+    font-weight: 900;
+    line-height: 1.7;
+    margin: 8px 12px;
+}
+.banner p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.notice {
+    border: 1px solid #d0d3da;
+    border-radius: 12px;
+    padding: 14px 18px;
+
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.notice .tag {
+    background-color: #292929;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.notice .more {
+    color: #5a5a5a;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.cards {
+    display: grid;
+    gap: 16px;
+
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    border: 1px solid #d0d3da;
+    padding: 12px;
+    border-radius: 12px;
+
+    min-width: 240px;
+}
+.card .thumb {
+    background-image: url('../public/thumbnail.png');
+    height: 120px;
+    background-size: cover;
+}
