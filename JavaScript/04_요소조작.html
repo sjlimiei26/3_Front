@@ -114,7 +114,7 @@
     <h3>요소(노드) 생성, 추가, 제거</h3>
     <div class="area" id="wrap"></div>
     <button onclick="addElement();">요소 추가</button>
-    <button>마지막 요소 제거</button>
+    <button onclick="removeLast();">마지막 요소 제거</button>
     <button onclick="removeAll();">내부 요소 모두 제거</button>
 
     <script>
@@ -145,6 +145,15 @@
             const h6List = document.querySelectorAll("#wrap h6");
 
             console.log(h6List.length);
+
+            if (h6List.length > 0) {
+                // 추가된 요소가 있는 경우
+                //  * 마지막 위치의 요소.remove();
+                h6List[h6List.length - 1].remove();
+            } else {
+                // 추가된 요소가 없는 경우
+                alert("삭제할 항목이 없습니다.");
+            }
         }
     </script>
 </body>
