@@ -50,8 +50,53 @@
 
             // * 요소 개수: .length
             console.log(`li 요소 개수: ${liList.length}`);
+
+            // for(초기식;조건식;증감식) { 반복할내용 }
+            for (let i = 0; i < liList.length; i++) {
+                // li 태그 내용 변경 => {i}번째 li
+                liList[i].textContent = i + "번째 li";
+
+                console.log(liList[i].textContent);
+            }
         }
     </script>
 
+    <h3>
+        CSS 선택자로 접근
+        - querySelector / querySelectorAll
+    </h3>
+    <div id="area2">점심메뉴: 김치돈가스나베(탄)</div>
+    <p class="item">아이템 A</p>
+    <p class="item">아이템 B</p>
+    <p class="item">아이템 C</p>
+    <button onclick="accessSelector();">선택자로 접근</button>
+
+    <script>
+        function accessSelector() {
+            // #area2 요소 선택
+            const one = document.querySelector("#area2");
+            console.log(one);
+            // 글자를 굵게 표현 => font-weight
+            one.style.fontWeight = "bold";
+            // => 해당하는 요소가 있을 경우 1개의 객체를 반환
+            //                   없을 경우 null 을 반환
+
+            // .item 요소들 선택
+            const all = document.querySelectorAll(".item");
+            console.log(all);
+            // => 해당하는 요소들이 있으면 NodeList 형태로 반환 (개수가 1개 이상)
+            //                     없으면 NodeList 형태로 반환 (개수가 0개)
+
+            // * NodeList는 forEach 메소드를 사용할 수 있음
+            all.forEach(function(item, index) {
+
+                // 각 요소의  글자 색 변경
+                item.style.color = "red";
+
+            });
+        }
+    </script>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
