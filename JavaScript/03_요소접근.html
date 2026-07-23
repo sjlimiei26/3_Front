@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 요소 접근</title>
+
+    <style>
+        .area {
+            border: 1px dotted pink;
+            width: 300px;
+            min-height: 50px;
+            padding: 8px;
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM 요소에 접근하기</h1>
+
+    <h3>아이디로 접근 - getElementById(아이디명)</h3>
+    <div class="area" id="area1"></div>
+    <button onclick="accessId();">아이디로 접근</button>
+
+    <script>
+        function accessId() {
+
+            // 아이디명이 area1인 요소 접근 => DOM객체 1개 반환
+            const area1 = document.getElementById("area1");
+
+            // 접근을 정상적으로 했을 경우, 해당 객체를 통해 조작 가능
+            area1.textContent = "아이디로 정상 접근!";
+            area1.style.backgroundColor = "yellow";
+
+        }
+    </script>
+
+    <h3>태그명으로 접근 - getElementsByTagName(태그명)</h3>
+    <ul>
+        <li>li 태그 내용</li>
+        <li>li 태그 내용</li>
+        <li>li 태그 내용</li>
+    </ul>
+    <button onclick="accessTag()">태그로 접근</button>
+
+    <script>
+        function accessTag() {
+            // 태그명이 li인 모든 요소 접근 => HTMLCollection 형태로 반환
+            const liList = document.getElementsByTagName("li");
+
+            // * 요소 개수: .length
+            console.log(`li 요소 개수: ${liList.length}`);
+        }
+    </script>
+
+</body>
+</html>
